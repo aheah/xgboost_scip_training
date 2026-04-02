@@ -1,0 +1,10 @@
+separator_type,count,total_efficacy,confidence_high,confidence_medium,confidence_low,confidence_very_low
+Mixing Cut,3049,2.7813218987183395e+19,469,718,264,1598
+Implied Bound Cut,12082,3.387319769735341e+20,1247,850,408,9577
+Basic Gomory Cut,7077,-63.87123050061494,142,1541,3198,2196
+Flow Cover Cut,36138,-1003.2597643413504,1369,7947,4555,22267
+Complemented MIR Cut,26880,3.497334298508912e+20,600,6482,8126,11672
+Lifted Cover Inequality,967,-38.73114420010281,176,278,42,471
+Clique Cut,678,1e+20,7,5,0,666
+Zero-half Cut,1825,2.5819888974716113e+19,384,414,33,994
+Strong Chvátal-Gomory Cut,8,0.04352061732200811,0,0,6,2
