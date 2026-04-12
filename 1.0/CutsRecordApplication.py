@@ -57,25 +57,25 @@ def cuts_record(mps_file):
 
 
     if eventHandler.all_row_data:
-        cut_file = os.path.join(data_dir, f"separator_all_row_data_{timestamp}.xlsx")
+        cut_file = os.path.join(data_dir, f"separator_all_row_data_{timestamp}.csv")
         pd.DataFrame(eventHandler.all_row_data).to_excel(cut_file, index=False)
         print(f"✓ 保存全部的约束数据: {len(eventHandler.all_row_data)} 条")
     if eventHandler.separator_data:
-        cut_file = os.path.join(data_dir, f"separator_data_{timestamp}.xlsx")
+        cut_file = os.path.join(data_dir, f"separator_data_{timestamp}.csv")
         pd.DataFrame(eventHandler.separator_data).to_excel(cut_file, index=False)
         print(f"✓ 保存割分离器的切割数据: {len(eventHandler.separator_data)} 条")
 
     if cutSelector.selected_data:
-        select_data_file = os.path.join(data_dir, f"separator_selector_data_{timestamp}.xlsx")
+        select_data_file = os.path.join(data_dir, f"separator_selector_data_{timestamp}.csv")
         pd.DataFrame(cutSelector.selected_data).to_excel(select_data_file, index=False)
         print(f"✓ 保存割选择器的切割数据: {len(eventHandler.node_data)} 条")
     if eventHandler.separator_lp_data:
-        cut_file = os.path.join(data_dir, f"separator_lp_data_{timestamp}.xlsx")
+        cut_file = os.path.join(data_dir, f"separator_lp_data_{timestamp}.csv")
         pd.DataFrame(eventHandler.separator_lp_data).to_excel(cut_file, index=False)
         print(f"✓ 保存加入LP的切割数据: {len(eventHandler.separator_lp_data)} 条")
     if eventHandler.separator_statistics:
         # 保存分离器统计
-        stats_file = os.path.join(data_dir, f"separator_statistics_{timestamp}.xlsx")
+        stats_file = os.path.join(data_dir, f"separator_statistics_{timestamp}.csv")
         stats_data = []
         for sep_type, stats in eventHandler.separator_statistics.items():
             row = {'separator_type': sep_type}
@@ -85,12 +85,12 @@ def cuts_record(mps_file):
         print(f"✓ 保存分离器统计: {len(stats_data)} 种分离器")
 
     if eventHandler.gap_data:
-        gap_file = os.path.join(data_dir, f"gap_{timestamp}.xlsx")
+        gap_file = os.path.join(data_dir, f"gap_{timestamp}.csv")
         pd.DataFrame(eventHandler.gap_data).to_excel(gap_file, index=False)
         print(f"✓ 保存间隙数据: {len(eventHandler.gap_data)} 条")
 
     if eventHandler.node_data:
-        node_file = os.path.join(data_dir, f"node_{timestamp}.xlsx")
+        node_file = os.path.join(data_dir, f"node_{timestamp}.csv")
         pd.DataFrame(eventHandler.node_data).to_excel(node_file, index=False)
         print(f"✓ 保存节点数据: {len(eventHandler.node_data)} 条")
 
