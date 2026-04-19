@@ -116,7 +116,9 @@ if __name__ == "__main__":
         # "flugpl.mps",  # 简单航空问题
         # "p0201.mps",  # MIPLIB经典小型问题
         # "30n20b8.mps",  # 30行，20列，其中8个二进制变量，比较复杂
-        "aflow30a.mps",
+        # "aflow30a.mps",
+        # "air05.mps",
+        "cbs-cta.mps",
     ]
 
     for problem in difficult_problems:
